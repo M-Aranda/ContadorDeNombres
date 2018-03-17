@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class Aplicacion extends javax.swing.JFrame {
 
     public Aplicacion() {
+        //validado
         initComponents();
         this.setTitle("Registrador de nombres");
 
@@ -80,7 +81,7 @@ public class Aplicacion extends javax.swing.JFrame {
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         String nombre = txt1.getText();
 
-        if (!nombre.matches("[a-zA-Z]+")) {
+        if (!nombre.matches("[a-zA-Z]+")||nombre.isEmpty()) {
             
             String titulo_mgs = "Error!";
             String msg = "Debe ingresar un nombre conformado por letras, no numeros ni espacios";
